@@ -7,7 +7,7 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
+        <p>Here it is!</p>
         <img src="images/goat_small.jpg"/>
       </div>
     );
