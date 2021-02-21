@@ -34,7 +34,7 @@ return (
   <>
   {imageStatus ? <div onClick={imageClicked}>{galleryItem.description}</div> :  <img onClick={imageClicked}src={galleryItem.path} />
   }
-  <p>This image has: {galleryItem.likes}</p>
+  <p>This image has: {galleryItem.likes} likes!</p>
   <button onClick={addLike}>
   Likes!
 </button>
