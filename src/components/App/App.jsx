@@ -34,7 +34,7 @@ function App () {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Here it is!</p>
-        <img src="images/goat_small.jpg"/>
+        
         <p>
         <GalleryList
          galleryList={galleryList}

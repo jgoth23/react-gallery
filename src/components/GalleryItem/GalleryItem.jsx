@@ -2,7 +2,10 @@ function GalleryItem({galleryItem}){
 
 
 return (
-  <div>In Item</div>
+  <>
+  <img src={galleryItem.path} />
+  {galleryItem.description}
+  </>
 
 )
 }
