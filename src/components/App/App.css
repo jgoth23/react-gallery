@@ -13,3 +13,8 @@
   font-size: 1.5em;
 }
 
+body {
+  background: rgb(242,109,109);
+background: linear-gradient(90deg, rgba(242,109,109,1) 7%, rgba(169,237,175,1) 50%, rgba(236,238,99,1) 100%);
+}
+
