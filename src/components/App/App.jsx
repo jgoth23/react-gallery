@@ -35,11 +35,11 @@ function App () {
         </header>
         <p>Here it is!</p>
         
-        <p>
+        
         <GalleryList
          galleryList={galleryList}
          fetchGallery={fetchGallery} />
-        </p>
+        
         
         <div>
           
