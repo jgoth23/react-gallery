@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import{useState} from 'react';
+import Axios from 'axios';
+import GalleryList from '../GalleryList/GalleryList';
 
-function App() {
+
+function App () {
   //likeCount tracks my state
   //setLikeCount lets me change the value of state
-    const [likeCount, setLikeCount] = useState(0);
+  const [galleryList, setGalleryList] = useState([]);
+     useEffect(() => {
+      fetchGallery();
+     }, []);
+
+     const fetchGallery = () => {
+    
+     Axios.get('/gallery')
+    .then(response => {
+      console.log('got a response!', response.data);
+
+      // Update our local state, with data from the server
+      setGalleryList(response.data);
+    })
+    .catch(err => {
+      console.log('ruh-roh....', err);
+    });
+  }
+
   return (
     
       <div className="App">
@@ -14,11 +35,13 @@ function App() {
         </header>
         <p>Here it is!</p>
         <img src="images/goat_small.jpg"/>
+        <p>
+        <GalleryList
+         galleryList={galleryList}
+         fetchGallery={fetchGallery} />
+        </p>
+        
         <div>
-        <p>Your photo has this many likes! {likeCount}</p>
-          <button onClick={() => setLikeCount(likeCount + 1)}>
-            Love this!
-          </button>
           
         </div>
       
